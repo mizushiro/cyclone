@@ -52,7 +52,7 @@ input[type="password"]{width:auto;vertical-align:middle;height:34px;border:1px s
 input[type="text"]:focus,
 input[type="date"]:focus,
 input[type="password"]:focus{border-color:#23b7e5}
-.inp-date{padding-right:40px !important;background:#fff url(/resources/img/ico_form2.png) no-repeat 100% -150px;width:145px !important;}
+.inp-date{padding-right:40px !important;background:#fff url(../img/ico_form2.png) no-repeat 100% -150px;width:145px !important;}
 .w-full{width:calc(100% - 10px)  !important}
 .w-half{width:50% !important}
 
@@ -63,7 +63,7 @@ button.dark{background:#0e3058;border-color:#0e3058;color:#fff;}
 .btn-small{height:34px;vertical-align:middle;border:1px solid #cfdadd;font-size:12px;color:#666;padding:0 25px;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.1);border-radius:2px}
 .btn-mini{height:28px;vertical-align:middle;border:1px solid #cfdadd;font-size:12px;color:#666;padding:0 8px;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.1);border-radius:2px}
 
-select{display:inline-block;position:relative;width:auto;height:34px;padding:0 30px 0 12px;border-radius:2px;background:#fff url(/resources/img/ico_form2.png) no-repeat 100% 0;appearance:none;-moz-appearance:none;-webkit-appearance:none;border:1px solid #c9c9c9;font-size:13px;cursor:pointer;outline:none;margin:0 5px;vertical-align: middle}
+select{display:inline-block;position:relative;width:auto;height:34px;padding:0 30px 0 12px;border-radius:2px;background:#fff url(../img/ico_form2.png) no-repeat 100% 0;appearance:none;-moz-appearance:none;-webkit-appearance:none;border:1px solid #c9c9c9;font-size:13px;cursor:pointer;outline:none;margin:0 5px;vertical-align: middle}
 select::-ms-expand{display:none;}
 select optgroup,
 select option{font-style:normal;background-color:#fff;font-size:13px;}
@@ -81,12 +81,12 @@ input[type="checkbox"] + label.not_txt:before {margin:0}
 input[type="radio"]:disabled + label,
 input[type="checkbox"]:disabled + label{cursor:default}
 
-input[type="checkbox"] + label:before{content:"";display:inline-block;width:20px;height:20px;background:url(/resources/img/ico_form.png) no-repeat 0 0;vertical-align:middle;margin-right:8px;}
+input[type="checkbox"] + label:before{content:"";display:inline-block;width:20px;height:20px;background:url(../img/ico_form.png) no-repeat 0 0;vertical-align:middle;margin-right:8px;}
 input[type="checkbox"]:checked + label:before{background-position:-20px 0}
 input[type="checkbox"]:disabled + label:before{background-position:-40px 0}
 input[type="checkbox"]:checked:disabled + label:before{background-position:-60px 0}
 
-input[type="radio"] + label:before{content:"";display:inline-block;width:20px;height:20px;background:url(/resources/img/ico_form.png) no-repeat 0 -20px;vertical-align:middle;margin-right:8px;}
+input[type="radio"] + label:before{content:"";display:inline-block;width:20px;height:20px;background:url(../img/ico_form.png) no-repeat 0 -20px;vertical-align:middle;margin-right:8px;}
 input[type="radio"]:checked + label:before{background-position:-20px -20px}
 input[type="radio"]:disabled + label:before{background-position:-40px -20px}
 input[type="radio"]:checked:disabled + label:before{background-position:-60px -20px}
@@ -164,13 +164,15 @@ input[type="radio"]:checked:disabled + label:before{background-position:-60px -2
 .layer_section .layer_section-container {transition:.4s;top:100px;width:calc(100% - 80px);max-height:calc(100% - 80px);background-color:#f9f9f9;border-radius:2px;box-shadow:0 1px 4px 0 rgba(0,0,0,.25);display:flex;flex-direction:column;position:relative}
 .layer_section.showing {visibility:visible;opacity:1}
 .layer_section.showing .layer_section-container {top:0;opacity:1}
-.layer_section-container .btn_layer-close {position:absolute;top:16px;right:16px;width:24px;height:24px;background:url(/resources/img/btn_close.png) no-repeat 50% 50%;z-index:20}
+.layer_section-container .btn_layer-close {position:absolute;top:16px;right:16px;width:24px;height:24px;background:url(../img/btn_close.png) no-repeat 50% 50%;z-index:20}
 .layer-title-box {height:56px;background-color:#0e3058;display:flex;align-items:center}
 .layer-title-box .layer-title {font-size:18px;font-weight:500;color:#fff;padding:0 20px;flex-shrink:0}
 .layer-content {padding:24px;overflow:auto}
 .layer-content-box {display:flex;gap:20px}
+.layer-content-left {flex-shrink:0}
 .layer-content-left .layer-check-label:before {margin-right:0 !important;}
 .layer-content-left-top {display:flex;gap:4px;margin-bottom:8px}
 .layer-content-left-top .btn-mini {flex:1;white-space:nowrap}
+.layer-content-right {flex:1;padding-right:20px}
 
 .yearpicker-container {z-index:101}
