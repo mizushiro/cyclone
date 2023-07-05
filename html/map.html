@@ -1,0 +1,765 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<title>태풍 정보</title>
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet" />
+	<link rel="stylesheet" href="/resources/js/lib/jquery-ui.min.css">
+	<link rel="stylesheet" href="/resources/js/lib/yearpicker.css">
+    <link rel="stylesheet" href="/resources/css/ui.base.css">
+	
+	<script src="/resources/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="/resources/js/lib/yearpicker.js"></script>
+	<script src="/resources/js/lib/jquery-ui.min.js"></script>
+	<script src="/resources/js/ui.plugins.js"></script>
+	<script src="/resources/js/ui.common.js"></script>
+</head>
+
+<body>
+	<div class="base-wrap" id="baseWrap">
+		<main class="base-main" id="baseMain">
+			<div class="map-area">
+				<div class="left-box">
+					<div class="left-search-box">
+						<input type="text" class="inp-date" placeholder="YYYY-MM-DD" title="일정방송 시작일">
+						<button type="button" class="btn-small">검색</button>
+					</div>
+					<div class="left-list-box">
+						<h2 class="left-title">태풍목록</h2>
+						<ul class="left-list">
+							<li class="left-list-item">[2022] 제 25호 파카르</li>
+							<li class="left-list-item selected">[2022] 제 25호 파카르</li>
+							<li class="left-list-item">[2022] 제 25호 파카르</li>
+							<li class="left-list-item">[2022] 제 25호 파카르</li>
+							<li class="left-list-item">[2022] 제 25호 파카르</li>
+							<li class="left-list-item">[2022] 제 25호 파카르</li>
+						</ul>
+					</div>
+					<div class="left-list-box">
+						<h2 class="left-title">태풍정보</h2>
+						<ul class="left-list">
+							<li class="left-list-item">태풍 제25-6호 (2022.12.13. 04:00)</li>
+							<li class="left-list-item">태풍 제25-6호 (2022.12.13. 04:00)</li>
+							<li class="left-list-item">태풍 제25-6호 (2022.12.13. 04:00)</li>
+							<li class="left-list-item">태풍 제25-6호 (2022.12.13. 04:00)</li>
+							<li class="left-list-item">태풍 제25-6호 (2022.12.13. 04:00)</li>
+							<li class="left-list-item">태풍 제25-6호 (2022.12.13. 04:00)</li>
+							<li class="left-list-item">태풍 제25-6호 (2022.12.13. 04:00)</li>
+							<li class="left-list-item">태풍 제25-6호 (2022.12.13. 04:00)</li>
+							<li class="left-list-item">태풍 제25-6호 (2022.12.13. 04:00)</li>
+							<li class="left-list-item">태풍 제25-6호 (2022.12.13. 04:00)</li>
+						</ul>
+					</div>
+				</div>
+				<div class="left-side">
+					<button type="button" class="btn-icon selected">
+						<span class="material-icons-outlined">
+							directions_boat
+						</span>
+					</button>
+					<button type="button" class="btn-icon">
+						<span class="material-icons-outlined icon-main-img">
+							tour
+						</span>
+						<span class="material-icons-outlined icon-bg-img">
+							pool
+						</span>
+					</button>
+					<button type="button" class="btn-icon">
+						<span class="material-icons-outlined">
+							hub
+						</span>
+					</button>
+					<button type="button" class="btn-icon">
+						<span class="material-icons-outlined">
+							straighten
+						</span>
+					</button>
+					<button type="button" class="btn-icon">
+						<span class="material-icons-outlined">
+							wind_power
+						</span>
+					</button>
+					<button type="button" class="btn-icon">
+						<span class="material-icons-outlined">
+							cyclone
+						</span>
+					</button>
+				</div>
+
+				<div class="right-box">
+					<div class="right-title-box">
+						<h3 class="right-title">2022년 제25-5호 파카르<br>(2022.12.12.22:00)</h3>
+						<div class="right-btn-box">
+							<button type="button" class="btn-icon" data-layer="data-layer1">
+								<span class="material-icons-outlined">
+									backup_table
+								</span>
+							</button>
+							<button type="button" class="btn-icon" data-layer="data-layer2">
+								<span class="material-icons-outlined">
+									analytics
+								</span>
+							</button>
+							<button type="button" class="btn-icon btn-fold">
+								<span class="material-icons-outlined">
+									expand_less
+								</span>
+							</button>
+						</div>
+					</div>
+					<div class="right-list-box">
+						<div class="right-top-area">
+							<input type="checkbox" id="treeDep11">
+							<label for="treeDep11" class="right-check-label">
+								<span class="right-check-data2">실제경로</span>
+							</label>
+							<div class="right-top-btn-group">
+								<button type="button" class="btn-mini point">컨센서스</button>
+								<button type="button" class="btn-mini dark">저장</button>
+							</div>
+						</div>
+						<div class="right-scroll-box">
+							<div class="right-sub-title-box">
+								<h4 class="right-sub-title">기관 예보</h4>
+								<div class="right-sub-btn-box">
+									<button type="button" class="btn-mini">전체 선택</button>
+									<button type="button" class="btn-mini">전체 해제</button>
+								</div>
+							</div>
+							<ul class="right-check-list">
+								<li class="right-check-list-item">
+									<input type="checkbox" id="treeDep1">
+									<label for="treeDep1" class="right-check-label">
+										<span class="right-check-data1" style="background-color:#000"></span>
+										<span class="right-check-data2">KMA</span>
+										<span class="right-check-data3">대한민국</span>
+									</label>
+								</li>
+								<li class="right-check-list-item">
+									<input type="checkbox" id="treeDep2">
+									<label for="treeDep2" class="right-check-label">
+										<span class="right-check-data1" style="background-color:#0000fa"></span>
+										<span class="right-check-data2">RSMC</span>
+										<span class="right-check-data3">일본</span>
+									</label>
+								</li>
+								<li class="right-check-list-item">
+									<input type="checkbox" id="treeDep3">
+									<label for="treeDep3" class="right-check-label">
+										<span class="right-check-data1" style="background-color:#800080"></span>
+										<span class="right-check-data2">JTWC</span>
+										<span class="right-check-data3">미국</span>
+									</label>
+								</li>
+							</ul>
+							<div class="right-sub-title-box">
+								<h4 class="right-sub-title">예측 모델</h4>
+								<div class="right-sub-btn-box">
+									<button type="button" class="btn-mini">전체 선택</button>
+									<button type="button" class="btn-mini">전체 해제</button>
+								</div>
+							</div>
+							<ul class="right-check-list">
+								<li class="right-check-list-item">
+									<input type="checkbox" id="treeDep1-1">
+									<label for="treeDep1-1" class="right-check-label">
+										<span class="right-check-data1" style="background-color:#7e1e9c"></span>
+										<span class="right-check-data2">UM</span>
+									</label>
+								</li>
+								<li class="right-check-list-item">
+									<input type="checkbox" id="treeDep1-2">
+									<label for="treeDep1-2" class="right-check-label">
+										<span class="right-check-data1" style="background-color:#14d3ff"></span>
+										<span class="right-check-data2">KEPS</span>
+									</label>
+								</li>
+								<li class="right-check-list-item">
+									<input type="checkbox" id="treeDep1-3">
+									<label for="treeDep1-3" class="right-check-label">
+										<span class="right-check-data1" style="background-color:#FF7F50"></span>
+										<span class="right-check-data2">HWRF</span>
+									</label>
+								</li>
+								<li class="right-check-list-item">
+									<input type="checkbox" id="treeDep1-4">
+									<label for="treeDep1-4" class="right-check-label">
+										<span class="right-check-data1" style="background-color:#cc3299"></span>
+										<span class="right-check-data2">GFS</span>
+									</label>
+								</li>
+								<li class="right-check-list-item">
+									<input type="checkbox" id="treeDep1-5">
+									<label for="treeDep1-5" class="right-check-label">
+										<span class="right-check-data1" style="background-color:#2f6b55"></span>
+										<span class="right-check-data2">NOGAPS</span>
+									</label>
+								</li>
+								<li class="right-check-list-item">
+									<input type="checkbox" id="treeDep1-6">
+									<label for="treeDep1-6" class="right-check-label">
+										<span class="right-check-data1" style="background-color:#008000"></span>
+										<span class="right-check-data2">ECMWF</span>
+									</label>
+								</li>
+								<li class="right-check-list-item">
+									<input type="checkbox" id="treeDep1-7">
+									<label for="treeDep1-7" class="right-check-label">
+										<span class="right-check-data1" style="background-color:#0b86b8"></span>
+										<span class="right-check-data2">JGSM</span>
+									</label>
+								</li>
+								<li class="right-check-list-item">
+									<input type="checkbox" id="treeDep1-8">
+									<label for="treeDep1-8" class="right-check-label">
+										<span class="right-check-data1" style="background-color:#13c7a3"></span>
+										<span class="right-check-data2">ECMWF_EPS</span>
+									</label>
+								</li>
+								<li class="right-check-list-item">
+									<input type="checkbox" id="treeDep1-9">
+									<label for="treeDep1-9" class="right-check-label">
+										<span class="right-check-data1" style="background-color:#CB3AE4"></span>
+										<span class="right-check-data2">KIM_3h</span>
+									</label>
+								</li>
+								<li class="right-check-list-item">
+									<input type="checkbox" id="treeDep1-10">
+									<label for="treeDep1-10" class="right-check-label">
+										<span class="right-check-data1" style="background-color:#CB3AE4"></span>
+										<span class="right-check-data2">KIM_6h</span>
+									</label>
+								</li>
+								<li class="right-check-list-item">
+									<input type="checkbox" id="treeDep1-11">
+									<label for="treeDep1-11" class="right-check-label">
+										<span class="right-check-data1" style="background-color:#9900cc"></span>
+										<span class="right-check-data2">KIM_EPS</span>
+									</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- content -->
+				
+				<!-- //content -->
+
+			</div>
+		</main>
+	</div>
+
+	<div id="data-layer1" class="layer_section">
+		<div class="layer_section-container">
+			<div class="layer-title-box">
+				<h1 class="layer-title">[2022] 제 25호 파카르</h1>
+			</div>
+			<div class="layer-content">
+				<table class="tbl-base">
+					<caption>태풍정보</caption>
+					<thead>
+					<tr>
+						<th scope="col" rowspan="3">시간</th>
+						<th scope="col" rowspan="3">예보시각</th>
+						<th scope="col" colspan="5">KMA</th>
+						<th scope="col" colspan="5">RSMC</th>
+						<th scope="col" colspan="5">JTWC</th>
+						<th scope="col" colspan="5">UM</th>
+						<th scope="col" colspan="5">KEPS</th>
+						<th scope="col" colspan="5">HWRF</th>
+						<th scope="col" colspan="5">GFS</th>
+						<th scope="col" colspan="5">NOGAPS</th>
+						<th scope="col" colspan="5">KIM_3h</th>
+						<th scope="col" colspan="5">KIM_6h</th>
+						<th scope="col" colspan="5">KIM_EPS</th>
+					</tr>
+					<tr>
+						<th scope="col" colspan="2">분석값</th>
+						<th scope="col" colspan="2">예보값</th>
+						<th scope="col" rowspan="2">오차(km)</th>
+						<th scope="col" colspan="2">분석값</th>
+						<th scope="col" colspan="2">예보값</th>
+						<th scope="col" rowspan="2">오차(km)</th>
+						<th scope="col" colspan="2">분석값</th>
+						<th scope="col" colspan="2">예보값</th>
+						<th scope="col" rowspan="2">오차(km)</th>
+						<th scope="col" colspan="2">분석값</th>
+						<th scope="col" colspan="2">예보값</th>
+						<th scope="col" rowspan="2">오차(km)</th>
+						<th scope="col" colspan="2">분석값</th>
+						<th scope="col" colspan="2">예보값</th>
+						<th scope="col" rowspan="2">오차(km)</th>
+						<th scope="col" colspan="2">분석값</th>
+						<th scope="col" colspan="2">예보값</th>
+						<th scope="col" rowspan="2">오차(km)</th>
+						<th scope="col" colspan="2">분석값</th>
+						<th scope="col" colspan="2">예보값</th>
+						<th scope="col" rowspan="2">오차(km)</th>
+						<th scope="col" colspan="2">분석값</th>
+						<th scope="col" colspan="2">예보값</th>
+						<th scope="col" rowspan="2">오차(km)</th>
+						<th scope="col" colspan="2">분석값</th>
+						<th scope="col" colspan="2">예보값</th>
+						<th scope="col" rowspan="2">오차(km)</th>
+						<th scope="col" colspan="2">분석값</th>
+						<th scope="col" colspan="2">예보값</th>
+						<th scope="col" rowspan="2">오차(km)</th>
+						<th scope="col" colspan="2">분석값</th>
+						<th scope="col" colspan="2">예보값</th>
+						<th scope="col" rowspan="2">오차(km)</th>
+					</tr>
+					<tr>
+						<th scope="col">위도</th>
+						<th scope="col">경도</th>
+						<th scope="col">위도</th>
+						<th scope="col">경도</th>
+						<th scope="col">위도</th>
+						<th scope="col">경도</th>
+						<th scope="col">위도</th>
+						<th scope="col">경도</th>
+						<th scope="col">위도</th>
+						<th scope="col">경도</th>
+						<th scope="col">위도</th>
+						<th scope="col">경도</th>
+						<th scope="col">위도</th>
+						<th scope="col">경도</th>
+						<th scope="col">위도</th>
+						<th scope="col">경도</th>
+						<th scope="col">위도</th>
+						<th scope="col">경도</th>
+						<th scope="col">위도</th>
+						<th scope="col">경도</th>
+						<th scope="col">위도</th>
+						<th scope="col">경도</th>
+						<th scope="col">위도</th>
+						<th scope="col">경도</th>
+						<th scope="col">위도</th>
+						<th scope="col">경도</th>
+						<th scope="col">위도</th>
+						<th scope="col">경도</th>
+						<th scope="col">위도</th>
+						<th scope="col">경도</th>
+						<th scope="col">위도</th>
+						<th scope="col">경도</th>
+						<th scope="col">위도</th>
+						<th scope="col">경도</th>
+						<th scope="col">위도</th>
+						<th scope="col">경도</th>
+						<th scope="col">위도</th>
+						<th scope="col">경도</th>
+						<th scope="col">위도</th>
+						<th scope="col">경도</th>
+						<th scope="col">위도</th>
+						<th scope="col">경도</th>
+						<th scope="col">위도</th>
+						<th scope="col">경도</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>2022-12-11 18:00</td>
+						<td>6</td>
+						<td>19.8</td>
+						<td>129.2</td>
+						<td>19.1</td>
+						<td>128.2</td>
+						<td>130.58</td>
+						<td>19.8</td>
+						<td>129.2</td>
+						<td>19.1</td>
+						<td>128.2</td>
+						<td>130.58</td>
+						<td>19.8</td>
+						<td>129.2</td>
+						<td>19.1</td>
+						<td>128.2</td>
+						<td>130.58</td>
+						<td>19.8</td>
+						<td>129.2</td>
+						<td>19.1</td>
+						<td>128.2</td>
+						<td>130.58</td>
+						<td>19.8</td>
+						<td>129.2</td>
+						<td>19.1</td>
+						<td>128.2</td>
+						<td>130.58</td>
+						<td>19.8</td>
+						<td>129.2</td>
+						<td>19.1</td>
+						<td>128.2</td>
+						<td>130.58</td>
+						<td>19.8</td>
+						<td>129.2</td>
+						<td>19.1</td>
+						<td>128.2</td>
+						<td>130.58</td>
+						<td>19.8</td>
+						<td>129.2</td>
+						<td>19.1</td>
+						<td>128.2</td>
+						<td>130.58</td>
+						<td>19.8</td>
+						<td>129.2</td>
+						<td>19.1</td>
+						<td>128.2</td>
+						<td>130.58</td>
+						<td>19.8</td>
+						<td>129.2</td>
+						<td>19.1</td>
+						<td>128.2</td>
+						<td>130.58</td>
+						<td>19.8</td>
+						<td>129.2</td>
+						<td>19.1</td>
+						<td>128.2</td>
+						<td>130.58</td>
+					</tr>
+					<tr>
+						<td>2022-12-11 18:00</td>
+						<td>6</td>
+						<td>19.8</td>
+						<td>129.2</td>
+						<td>19.1</td>
+						<td>128.2</td>
+						<td>130.58</td>
+						<td>19.8</td>
+						<td>129.2</td>
+						<td>19.1</td>
+						<td>128.2</td>
+						<td>130.58</td>
+						<td>19.8</td>
+						<td>129.2</td>
+						<td>19.1</td>
+						<td>128.2</td>
+						<td>130.58</td>
+						<td>19.8</td>
+						<td>129.2</td>
+						<td>19.1</td>
+						<td>128.2</td>
+						<td>130.58</td>
+						<td>19.8</td>
+						<td>129.2</td>
+						<td>19.1</td>
+						<td>128.2</td>
+						<td>130.58</td>
+						<td>19.8</td>
+						<td>129.2</td>
+						<td>19.1</td>
+						<td>128.2</td>
+						<td>130.58</td>
+						<td>19.8</td>
+						<td>129.2</td>
+						<td>19.1</td>
+						<td>128.2</td>
+						<td>130.58</td>
+						<td>19.8</td>
+						<td>129.2</td>
+						<td>19.1</td>
+						<td>128.2</td>
+						<td>130.58</td>
+						<td>19.8</td>
+						<td>129.2</td>
+						<td>19.1</td>
+						<td>128.2</td>
+						<td>130.58</td>
+						<td>19.8</td>
+						<td>129.2</td>
+						<td>19.1</td>
+						<td>128.2</td>
+						<td>130.58</td>
+						<td>19.8</td>
+						<td>129.2</td>
+						<td>19.1</td>
+						<td>128.2</td>
+						<td>130.58</td>
+					</tr>
+					<!-- D : 선택된 경우 [selected]add -->
+					<tr class="selected">
+						<td>2022-12-11 18:00</td>
+						<td>6</td>
+						<td>19.8</td>
+						<td>129.2</td>
+						<td>19.1</td>
+						<td>128.2</td>
+						<td>130.58</td>
+						<td>19.8</td>
+						<td>129.2</td>
+						<td>19.1</td>
+						<td>128.2</td>
+						<td>130.58</td>
+						<td>19.8</td>
+						<td>129.2</td>
+						<td>19.1</td>
+						<td>128.2</td>
+						<td>130.58</td>
+						<td>19.8</td>
+						<td>129.2</td>
+						<td>19.1</td>
+						<td>128.2</td>
+						<td>130.58</td>
+						<td>19.8</td>
+						<td>129.2</td>
+						<td>19.1</td>
+						<td>128.2</td>
+						<td>130.58</td>
+						<td>19.8</td>
+						<td>129.2</td>
+						<td>19.1</td>
+						<td>128.2</td>
+						<td>130.58</td>
+						<td>19.8</td>
+						<td>129.2</td>
+						<td>19.1</td>
+						<td>128.2</td>
+						<td>130.58</td>
+						<td>19.8</td>
+						<td>129.2</td>
+						<td>19.1</td>
+						<td>128.2</td>
+						<td>130.58</td>
+						<td>19.8</td>
+						<td>129.2</td>
+						<td>19.1</td>
+						<td>128.2</td>
+						<td>130.58</td>
+						<td>19.8</td>
+						<td>129.2</td>
+						<td>19.1</td>
+						<td>128.2</td>
+						<td>130.58</td>
+						<td>19.8</td>
+						<td>129.2</td>
+						<td>19.1</td>
+						<td>128.2</td>
+						<td>130.58</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+			<button type="button" class="btn_layer-close"><span class="for-a11y">레이어팝업 닫기</span></button>
+		</div>
+	</div>
+
+	<div id="data-layer2" class="layer_section">
+		<div class="layer_section-container">
+			<div class="layer-title-box">
+				<h1 class="layer-title">[2022] 제 25호 파카르</h1>
+			</div>
+			<div class="layer-content">
+				<div class="layer-content-box">
+					<div class="layer-content-left">
+						<div class="layer-content-left-top">
+							<button type="button" class="btn-mini">전체 선택</button>
+							<button type="button" class="btn-mini">전체 해제</button>
+							<button type="button" class="btn-mini point">컨센서스</button>
+						</div>
+						<table class="tbl-base">
+							<caption>태풍정보</caption>
+							<thead>
+							<tr>
+								<th scope="col"></th>
+								<th scope="col">기관/모델</th>
+								<th scope="col">TM(UTC)</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>
+									<input type="checkbox" id="treeDep2-1">
+									<label for="treeDep2-1" class="layer-check-label">
+										<span class="for-a11y">check</span>
+									</label>
+								</td>
+								<td>KMA</td>
+								<td>2022년 12월 12일 12시</td>
+							</tr>
+							<!-- D : 선택된 경우 [selected]add -->
+							<tr class="selected">
+								<td>
+									<input type="checkbox" id="treeDep2-2">
+									<label for="treeDep2-2" class="layer-check-label">
+										<span class="for-a11y">check</span>
+									</label>
+								</td>
+								<td>RSMC</td>
+								<td>2022년 12월 12일 12시</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" id="treeDep2-3">
+									<label for="treeDep2-3" class="layer-check-label">
+										<span class="for-a11y">check</span>
+									</label>
+								</td>
+								<td>NOGAPS</td>
+								<td>2022년 12월 12일 12시</td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="layer-content-right">
+						<table class="tbl-base">
+						<thead>
+						<tr>
+							<th scope="col" rowspan="2">시간</th>
+							<th scope="col" colspan="2">CONSENSUS</th>
+							<th scope="col" colspan="2">KMA</th>
+							<th scope="col" colspan="2">RSMC</th>
+							<th scope="col" colspan="2">JTWC</th>
+							<th scope="col" colspan="2">UM</th>
+							<th scope="col" colspan="2">KEPS</th>
+							<th scope="col" colspan="2">HWRF</th>
+							<th scope="col" colspan="2">GFS</th>
+							<th scope="col" colspan="2">NOGAPS</th>
+							<th scope="col" colspan="2">KIM_3h</th>
+							<th scope="col" colspan="2">KIM_6h</th>
+							<th scope="col" colspan="2">KIM_EPS</th>
+						</tr>
+						<tr>
+							<th scope="col">위도</th>
+							<th scope="col">경도</th>
+							<th scope="col">위도</th>
+							<th scope="col">경도</th>
+							<th scope="col">위도</th>
+							<th scope="col">경도</th>
+							<th scope="col">위도</th>
+							<th scope="col">경도</th>
+							<th scope="col">위도</th>
+							<th scope="col">경도</th>
+							<th scope="col">위도</th>
+							<th scope="col">경도</th>
+							<th scope="col">위도</th>
+							<th scope="col">경도</th>
+							<th scope="col">위도</th>
+							<th scope="col">경도</th>
+							<th scope="col">위도</th>
+							<th scope="col">경도</th>
+							<th scope="col">위도</th>
+							<th scope="col">경도</th>
+							<th scope="col">위도</th>
+							<th scope="col">경도</th>
+							<th scope="col">위도</th>
+							<th scope="col">경도</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td>2022-12-12 12:00</td>
+							<td class="active">19.8</td>
+							<td class="active">129.2</td>
+							<td>19.1</td>
+							<td>128.2</td>
+							<td>130.58</td>
+							<td>19.8</td>
+							<td>129.2</td>
+							<td>19.1</td>
+							<td>128.2</td>
+							<td>130.58</td>
+							<td>19.8</td>
+							<td>129.2</td>
+							<td>19.1</td>
+							<td>128.2</td>
+							<td>130.58</td>
+							<td>19.8</td>
+							<td>129.2</td>
+							<td>19.1</td>
+							<td>128.2</td>
+							<td>130.58</td>
+							<td>19.8</td>
+							<td>129.2</td>
+							<td>19.1</td>
+							<td>128.2</td>
+						</tr>
+						<tr>
+							<td>2022-12-12 12:00</td>
+							<td class="active">19.8</td>
+							<td class="active">129.2</td>
+							<td>19.1</td>
+							<td>128.2</td>
+							<td>130.58</td>
+							<td>19.8</td>
+							<td>129.2</td>
+							<td>19.1</td>
+							<td>128.2</td>
+							<td>130.58</td>
+							<td>19.8</td>
+							<td>129.2</td>
+							<td>19.1</td>
+							<td>128.2</td>
+							<td>130.58</td>
+							<td>19.8</td>
+							<td>129.2</td>
+							<td>19.1</td>
+							<td>128.2</td>
+							<td>130.58</td>
+							<td>19.8</td>
+							<td>129.2</td>
+							<td>19.1</td>
+							<td>128.2</td>
+						</tr>
+						<tr>
+							<td>2022-12-12 12:00</td>
+							<td class="active">19.8</td>
+							<td class="active">129.2</td>
+							<td>19.1</td>
+							<td>128.2</td>
+							<td>130.58</td>
+							<td>19.8</td>
+							<td>129.2</td>
+							<td>19.1</td>
+							<td>128.2</td>
+							<td>130.58</td>
+							<td>19.8</td>
+							<td>129.2</td>
+							<td>19.1</td>
+							<td>128.2</td>
+							<td>130.58</td>
+							<td>19.8</td>
+							<td>129.2</td>
+							<td>19.1</td>
+							<td>128.2</td>
+							<td>130.58</td>
+							<td>19.8</td>
+							<td>129.2</td>
+							<td>19.1</td>
+							<td>128.2</td>
+						</tr>
+						</tbody>
+					</table>
+					</div>
+				</div>
+			</div>
+			<button type="button" class="btn_layer-close"><span class="for-a11y">레이어팝업 닫기</span></button>
+		</div>
+	</div>
+		
+	<script>
+		newhome.callLayer();
+		;(function($, win, doc, undefined) {
+			$(doc).ready(function(){
+				$(".inp-date").yearpicker({
+					year: 2021,
+					startYear: 2019,
+					endYear: 2050,
+				});
+				$('.btn-fold').on('click', function (e) {
+					$(this).toggleClass('close');
+					$('.right-list-box').toggleClass('hidden');
+				});
+			});
+		})(jQuery, window, document);
+	</script>
+</body>
+</html>
