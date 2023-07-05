@@ -174,7 +174,7 @@ input[type="radio"]:checked:disabled + label:before{background-position:-60px -2
 .layer_section.showing {visibility:visible;opacity:1}
 .layer_section.showing .layer_section-container {top:0;opacity:1}
 .layer_section-container .btn_layer-close {position:absolute;top:16px;right:16px;width:24px;height:24px;background:url(../img/btn_close.png) no-repeat 50% 50%;z-index:20}
-.layer-title-box {height:56px;background-color:#0e3058;display:flex;align-items:center}
+.layer-title-box {height:56px;background-color:#0e3058;display:flex;align-items:center;flex-shrink:0}
 .layer-title-box .layer-title {font-size:18px;font-weight:500;color:#fff;padding:0 20px;flex-shrink:0}
 .layer-content {padding:24px;overflow:auto}
 .layer-content-box {display:flex;gap:20px}
